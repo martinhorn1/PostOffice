@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# PostOffice Application
+Front end for Post Office application that displays information about shipments and allows creating new shipments.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+The application contains information about created shipments and their contents. It is possible to create new shipments as well. The webpage of the application is responsive.
 
-In the project directory, you can run:
+### Home page
 
-### `yarn start`
+Home page shows all the created shipments with the most recently created shipment on the top. Clicking on a shipment expands the shipment's detailed information. In two columns in the shipment's detailed information is shown which bags of parcels and letters are on the shipment. On top of the shipments is the "Create Shipment" button, which will redirect the user to a new shipment creation page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Create shipment page
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+On creating a new shipment all the required fields must be filled. If a field doesn't match the expected value, then the guiding error messages will be shown. Only current date or a future date can be selected for a flight date. There are two buttons shown in the form to add parcel bags or letter bags. Since a shipment should contain at least one of either bags, then the shipment creation button will appear only if there's at least one bag of letters or parcels. Only one of the forms from adding shipment contents is available at a time.
 
-### `yarn test`
+When all the required conditions are met and the "Create Shipment" button has been clicked, then an alert message appears about a successful creation of the shipment. If all required conditions haven't been fulfilled, an alert will appear and the shipment will not be created. All shipments can be seen again by clicking on the text "Post Office Application" in the navigation bar.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Adding letters and parcels
 
-### `yarn build`
+Adding letters will create one bag with one submitting of the letterbag form.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Adding parcels will automatically create bags for parcels. One bag can contain a maximum of 5 parcels. If the shipment contains more than 5 parcels, a new bag will be created.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Before starting with these steps, start the back end server by following the steps in another repository [here](https://github.com/martinhorn1/PostApi).
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Clone this repository
+- Open a terminal window in the project folder
+- Install the dependencies by running the following command:
+```
+npm install
+```
+or
+```
+yarn install
+```
+- Start the project by running the following command:
+```
+npm start
+```
+or
+```
+yarn start
+```
+The application will run on http://localhost:3000
